@@ -1,11 +1,16 @@
 import Foundation
 
-public class UntilFailNode: Leaf {
+public class UntilFailNode: Node {
+    public init(name: String, priority: Int = 0) {
+        super.init(name: name, priority: priority)
+    }
+    
     public override func process() -> Node.Status {
-        if (strategy.process() == .failure) {
+        if (childrens[0].process() == .failure) {
             reset()
             return .failure
         }
+        
         return .runnnig
     }
 }
