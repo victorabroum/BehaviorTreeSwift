@@ -1,10 +1,10 @@
 import Foundation
 
-public class UntilFailNode: Leaf {
+public class UntilSucessNode: Leaf {
     public override func process() -> Node.Status {
-        if (strategy.process() == .failure) {
+        if (strategy.process() == .sucess) {
             reset()
-            return .failure
+            return .sucess
         }
         return .runnnig
     }
