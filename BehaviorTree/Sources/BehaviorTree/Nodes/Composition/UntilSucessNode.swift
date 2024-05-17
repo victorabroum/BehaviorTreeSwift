@@ -11,6 +11,6 @@ public class UntilSucessNode: Node {
             return .sucess
         }
         
-        return .runnnig
+        return .running
     }
 }

@@ -18,8 +18,8 @@ public class PrioritySelectorNode: SelectorNode {
     public override func process() -> Node.Status {
         for child in sortedChildrens {
             switch child.process() {
-            case .runnnig:
-                return .runnnig
+            case .running:
+                return .running
             case .sucess:
                 return .sucess
             default:

@@ -11,6 +11,6 @@ public class UntilFailNode: Node {
             return .failure
         }
         
-        return .runnnig
+        return .running
     }
 }

@@ -7,14 +7,14 @@ public class RepeatForeverNode: Node {
     
     public override func process() -> Node.Status {
         switch childrens[0].process() {
-        case .runnnig:
-            return .runnnig
+        case .running:
+            return .running
         case .failure:
             reset()
             return .failure
         default:
             reset()
-            return .runnnig
+            return .running
         }
     }
 }

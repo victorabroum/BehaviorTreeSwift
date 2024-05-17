@@ -7,8 +7,8 @@ public class InverterNode: Node {
     
     public override func process() -> Node.Status {
         switch childrens[0].process() {
-        case .runnnig:
-            return .runnnig
+        case .running:
+            return .running
         case .sucess:
             return .failure
         case .failure:

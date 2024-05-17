@@ -8,14 +8,14 @@ public class SequenceNode: Node {
     public override func process() -> Node.Status {
         if (currentChildIndex < childrens.count) {
             switch(childrens[currentChildIndex].process()) {
-            case .runnnig:
-                return .runnnig
+            case .running:
+                return .running
             case .failure:
                 reset()
                 return .failure
             default:
                 currentChildIndex += 1
-                return currentChildIndex == childrens.count ? .sucess : .runnnig
+                return currentChildIndex == childrens.count ? .sucess : .running
             }
         }
         reset()

@@ -11,8 +11,8 @@ public class RepeatCountNode: Node {
     
     public override func process() -> Node.Status {
         switch childrens[0].process() {
-        case .runnnig:
-            return .runnnig
+        case .running:
+            return .running
         case .failure:
             reset()
             return .failure
@@ -22,7 +22,7 @@ public class RepeatCountNode: Node {
                 return .sucess
             }
             reset()
-            return .runnnig
+            return .running
         }
         
         return .failure

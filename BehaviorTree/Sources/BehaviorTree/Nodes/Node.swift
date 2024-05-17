@@ -2,7 +2,7 @@ import Foundation
 
 open class Node {
     public enum Status {
-        case sucess, failure, runnnig
+        case sucess, failure, running
     }
     
     public private(set) var name: String
@@ -16,7 +16,7 @@ open class Node {
     public var priority: Int
     
     public init(name: String = "Node",
-                status: Status = .runnnig,
+                status: Status = .running,
                 childrens: Array<Node> = [],
                 currentChildIndex: Int = 0,
                 priority: Int = 0,

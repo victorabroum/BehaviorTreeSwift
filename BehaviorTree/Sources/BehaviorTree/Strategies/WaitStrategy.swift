@@ -18,7 +18,7 @@ public class WaitStrategy: Strategy {
         let elapsedTime = Date().timeIntervalSince(startTime!)
         
         if elapsedTime < waitTime {
-            return .runnnig
+            return .running
         } else {
             reset()
             return .sucess
