@@ -10,6 +10,6 @@ public class ActionStrategy: Strategy {
     
     public func process() -> Node.Status {
         action()
-        return .sucess
+        return .success
     }
 }

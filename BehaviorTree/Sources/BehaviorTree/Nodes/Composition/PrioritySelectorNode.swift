@@ -20,8 +20,8 @@ public class PrioritySelectorNode: SelectorNode {
             switch child.process() {
             case .running:
                 return .running
-            case .sucess:
-                return .sucess
+            case .success:
+                return .success
             default:
                 continue
             }

@@ -19,7 +19,7 @@ public class RepeatCountNode: Node {
         default:
             count -= 1
             if count <= 0 {
-                return .sucess
+                return .success
             }
             reset()
             return .running

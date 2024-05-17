@@ -8,11 +8,11 @@ open class BehaviorTree: Node {
     open override func process() -> Node.Status {
         while (currentChildIndex < childrens.count) {
             var status = childrens[currentChildIndex].process()
-            if (status != .sucess) {
+            if (status != .success) {
                 return status
             }
             currentChildIndex += 1
         }
-        return .sucess
+        return .success
     }
 }

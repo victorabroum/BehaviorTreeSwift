@@ -10,6 +10,6 @@ public class LogStrategy: Strategy {
     
     public func process() -> Node.Status {
         print(text)
-        return .sucess
+        return .success
     }
 }

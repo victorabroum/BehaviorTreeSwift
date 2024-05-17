@@ -10,9 +10,9 @@ public class SelectorNode: Node {
             switch (childrens[currentChildIndex].process()) {
             case .running:
                 return .running
-            case .sucess:
+            case .success:
                 reset()
-                return .sucess
+                return .success
             default:
                 currentChildIndex += 1
                 return .running

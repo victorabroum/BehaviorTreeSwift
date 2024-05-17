@@ -6,9 +6,9 @@ public class UntilSucessNode: Node {
     }
     
     public override func process() -> Node.Status {
-        if (childrens[0].process() == .sucess) {
+        if (childrens[0].process() == .success) {
             reset()
-            return .sucess
+            return .success
         }
         
         return .running

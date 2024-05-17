@@ -2,7 +2,7 @@ import Foundation
 
 open class Node {
     public enum Status {
-        case sucess, failure, running
+        case success, failure, running
     }
     
     public private(set) var name: String

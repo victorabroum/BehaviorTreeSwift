@@ -9,6 +9,6 @@ public class ConditionalStrategy: Strategy {
     }
     
     public func process() -> Node.Status {
-        return predicate() ? .sucess : .failure
+        return predicate() ? .success : .failure
     }
 }

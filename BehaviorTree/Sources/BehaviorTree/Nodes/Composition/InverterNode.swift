@@ -9,10 +9,10 @@ public class InverterNode: Node {
         switch childrens[0].process() {
         case .running:
             return .running
-        case .sucess:
+        case .success:
             return .failure
         case .failure:
-            return .sucess
+            return .success
         }
     }
 }

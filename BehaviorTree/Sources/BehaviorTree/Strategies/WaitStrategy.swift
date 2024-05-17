@@ -21,7 +21,7 @@ public class WaitStrategy: Strategy {
             return .running
         } else {
             reset()
-            return .sucess
+            return .success
         }
     }
     
