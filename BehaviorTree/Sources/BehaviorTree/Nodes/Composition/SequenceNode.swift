@@ -6,44 +6,19 @@ public class SequenceNode: Node {
     }
     
     public override func process() -> Node.Status {
-//        if (currentChildIndex < childrens.count) {
-//            switch(childrens[currentChildIndex].process()) {
-//            case .running:
-//                return .running
-//            case .failure:
-//                reset()
-//                return .failure
-//            default:
-//                currentChildIndex += 1
-//                return currentChildIndex == childrens.count ? .sucess : .running
-//            }
-//        }
-//        reset()
-//        return .sucess
-        
-        while currentChildIndex < childrens.count {
-            let status = childrens[currentChildIndex].process()
-            switch status {
+        if (currentChildIndex < childrens.count) {
+            switch(childrens[currentChildIndex].process()) {
             case .running:
-                self.status = .running
                 return .running
             case .failure:
-                self.status = .failure
+                reset()
                 return .failure
-            case .success:
+            default:
                 currentChildIndex += 1
+                return currentChildIndex == childrens.count ? .success : .running
             }
         }
-        
-        self.status = .success
+        reset()
         return .success
-    }
-    
-    public override func reset() {
-        super.reset()
-        currentChildIndex = 0
-        for child in childrens {
-            child.reset()
-        }
     }
 }
