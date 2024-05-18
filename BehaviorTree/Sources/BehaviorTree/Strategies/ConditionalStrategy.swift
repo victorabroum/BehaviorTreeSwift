@@ -1,6 +1,6 @@
 import Foundation
 
-public class ConditionalStrategy: Strategy {
+open class ConditionalStrategy: Strategy {
     
     var predicate: () -> Bool
     
