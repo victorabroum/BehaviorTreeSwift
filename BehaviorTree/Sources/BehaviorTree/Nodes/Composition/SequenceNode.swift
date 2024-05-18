@@ -1,8 +1,8 @@
 import Foundation
 
 public class SequenceNode: Node {
-    public init(name: String, priority: Int = 0) {
-        super.init(name: name, priority: priority)
+    public init(name: String, childrens: Array<Node> = [], priority: Int = 0) {
+        super.init(name: name, childrens: childrens, priority: priority)
     }
     
     public override func process() -> Node.Status {
